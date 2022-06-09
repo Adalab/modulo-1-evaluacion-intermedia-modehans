@@ -1,9 +1,15 @@
 :root {
   font-family: 'Rubik', sans-serif;
+  --color-grey: #4a4a4a;
+  --color-blue: #3CDBC0;
+  --color-white: #FFFFFF;
+  font-size: calc(16px * 0.625);
+
 }
 
 .header {
   position: sticky;
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,34 +24,30 @@
   margin-top: 10px;
 }
 
-.navi {
-  display: flex;
-  gap: 20px;
-
-}
 
 .navi .button {
   border: none;
   background-color: transparent;
-  padding: 0;
+  padding: 0px 10px;
+
 }
 
 .navi .link {
-  color: #4a4a4a;
+  color: var(--color-grey);
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 .main {
-  background-color: #3CDBC0;
+  background-color: var(--color-blue);
   height: 100vh;
 }
 
 .main .title {
-  font-size: 30px;
+  font-size: 3.0rem;
   font-weight: bolder;
-  color: #FFFFFF;
-  width: 250px;
+  color: var(--color-white);
+  word-spacing: 100vw;
   text-align: center;
   position: relative;
   top: 33vh;
@@ -58,11 +60,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 20px 30px;
+    margin: 20px;
   }
 
   .main .title {
-    top: 50vh;
-    font-size: 40px;
+    font-size: 4.0rem;
   }
 }
