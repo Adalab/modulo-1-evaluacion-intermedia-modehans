@@ -1,16 +1,16 @@
 :root {
   font-family: 'Rubik', sans-serif;
-
 }
 
 .header {
   position: sticky;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 13px;
 }
 
 .header .logo {
@@ -21,12 +21,13 @@
 .navi {
   display: flex;
   gap: 20px;
-  margin-bottom: 13px;
+
 }
 
 .navi .button {
   border: none;
   background-color: transparent;
+  padding: 0;
 }
 
 .navi .link {
@@ -38,16 +39,30 @@
 .main {
   background-color: #3CDBC0;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .main .title {
   font-size: 30px;
   font-weight: bolder;
   color: #FFFFFF;
-  width: 300px;
+  width: 250px;
   text-align: center;
-  margin-bottom: 50%;
+  position: relative;
+  top: 33vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+}
+
+@media all and (min-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 30px;
+  }
+
+  .main .title {
+    top: 50vh;
+    font-size: 40px;
+  }
 }
