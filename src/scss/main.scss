@@ -1,4 +1,4 @@
-@import "./core/reset";
+@import'./core/reset';
 
 :root {
   font-family: 'Rubik', sans-serif;
@@ -10,62 +10,67 @@
 }
 
 .header {
-  position: sticky;
+  width: 100vw;
+  background-color: var(--color-white);
+  position: fixed;
   top: 0;
-  display: flex;
+  display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-top: 10px;
-  margin-bottom: 13px;
+  padding-top: 10px;
+  padding-bottom: 13px;
+  &__logo {
+    width: 155px;
+    }
+  &__menu {
+    display: flex;
+    &__link {
+      color: var(--color-grey);
+      text-decoration: none;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      padding: 10px;
+    }
+  }
 }
 
-.header .logo {
-  width: 155px;
-  margin-top: 10px;
-}
 
-
-.navi .button {
-  border: none;
-  background-color: transparent;
-  padding: 0px 10px;
-
-}
-
-.navi .link {
-  color: var(--color-grey);
-  text-decoration: none;
-  font-size: 1.6rem;
-}
 
 .main {
   background-color: var(--color-blue);
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-.main .title {
+.main__title {
   font-size: 3.0rem;
   font-weight: bolder;
   color: var(--color-white);
   word-spacing: 100vw;
   text-align: center;
-  position: relative;
-  top: 33vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
-}
+  text-transform: capitalize;
+  }
+
 
 @media all and (min-width: 768px) {
   .header {
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin: 20px;
+ justify-content: space-between;
+ padding: 20px 0px;
+ &__logo{
+  padding-left: 30px;
+ }
+&__menu{
+  padding-right: 20px;
+}
   }
 
-  .main .title {
+  .main__title {
     font-size: 4.0rem;
   }
 }
