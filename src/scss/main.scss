@@ -6,7 +6,6 @@
   --color-blue: #3CDBC0;
   --color-white: #FFFFFF;
   font-size: calc(16px * 0.625);
-
 }
 
 .header {
@@ -14,28 +13,30 @@
   background-color: var(--color-white);
   position: fixed;
   top: 0;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
   padding-top: 10px;
   padding-bottom: 13px;
-  &__logo {
-    width: 155px;
-    }
-  &__menu {
-    display: flex;
-    &__link {
-      color: var(--color-grey);
-      text-decoration: none;
-      font-size: 1.6rem;
-      text-transform: uppercase;
-      padding: 10px;
-    }
-  }
 }
 
+.logoHeader {
+  width: 155px;
+}
+
+.menuHeader {
+  display: flex;
+
+  &__link {
+    color: var(--color-grey);
+    text-decoration: none;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    padding: 10px;
+  }
+}
 
 
 .main {
@@ -45,30 +46,31 @@
   justify-content: center;
   align-items: center;
 
-}
-
-.main__title {
-  font-size: 3.0rem;
-  font-weight: bolder;
-  color: var(--color-white);
-  word-spacing: 100vw;
-  text-align: center;
-  text-transform: capitalize;
+  &__title {
+    font-size: 3.0rem;
+    font-weight: bolder;
+    color: var(--color-white);
+    word-spacing: 100vw;
+    text-align: center;
+    text-transform: capitalize;
   }
-
+}
 
 @media all and (min-width: 768px) {
   .header {
     flex-direction: row;
- justify-content: space-between;
- padding: 20px 0px;
- &__logo{
-  padding-left: 30px;
- }
-&__menu{
-  padding-right: 20px;
-}
+    justify-content: space-between;
+    padding: 20px 0px;
   }
+
+  .logoHeader {
+    padding-left: 30px;
+  }
+
+  .menuHeader {
+    padding-right: 20px;
+  }
+
 
   .main__title {
     font-size: 4.0rem;
